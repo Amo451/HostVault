@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO META TAGS ===== -->
+  <title>HostVault – Honest Web Hosting Reviews & Comparisons 2025</title>
+  <meta name="description" content="HostVault provides in-depth, unbiased web hosting reviews and side-by-side comparisons. Find the best hosting plan for your budget and needs in 2025." />
+  <meta name="keywords" content="best web hosting, web hosting reviews, cheap web hosting, WordPress hosting, managed hosting, hosting comparison 2025" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://hostvault.vercel.app/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HostVault – Honest Web Hosting Reviews & Comparisons 2025" />
+  <meta property="og:description" content="Tested 40+ hosting providers so you don't have to. Real speed tests, real uptime data, zero fluff." />
+  <meta property="og:url" content="https://hostvault.vercel.app/" />
+  <meta property="og:image" content="https://hostvault.vercel.app/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HostVault – Honest Web Hosting Reviews" />
+  <meta name="twitter:description" content="Stop paying for hosting that lets you down. Honest reviews, real comparisons." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HostVault",
+    "url": "https://hostvault.vercel.app",
+    "description": "Honest web hosting reviews and comparisons",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://hostvault.vercel.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===========================
+       CSS CUSTOM PROPERTIES
+    =========================== */
+    :root {
+      --ink: #0d1117;
+      --ink-light: #3d4451;
+      --ink-muted: #6b7585;
+      --surface: #ffffff;
+      --surface-2: #f7f8fa;
+      --surface-3: #eef0f4;
+      --border: #e2e5ea;
+      --accent: #1a56db;
+      --accent-light: #ebf0ff;
+      --accent-dark: #1040b0;
+      --gold: #f59e0b;
+      --gold-light: #fef3c7;
+      --green: #059669;
+      --green-light: #d1fae5;
+      --red: #dc2626;
+      --red-light: #fee2e2;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,.12), 0 4px 12px rgba(0,0,0,.08);
+      --shadow-xl: 0 24px 64px rgba(0,0,0,.14);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+      --max-w: 1180px;
+      --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===========================
+       RESET & BASE
+    =========================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--surface);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font-body); border: none; background: none; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); border: 0;
+    }
+
+    /* ===========================
+       NAV
+    =========================== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-logo-icon {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { color: white; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink-light);
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent);
+      color: white !important;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .nav-cta:hover { background: var(--accent-dark) !important; transform: translateY(-1px); }
+    .nav-mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+    }
+    .nav-mobile-toggle span {
+      width: 22px; height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* ===========================
+       HERO
+    =========================== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0 80px;
+      background: linear-gradient(160deg, #f0f4ff 0%, #fafbff 60%, #fff 100%);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(26,86,219,.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(245,158,11,.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold-light);
+      color: #92400e;
+      border: 1px solid #fcd34d;
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.13;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--ink-light);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 4px 14px rgba(26,86,219,.3);
+    }
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(26,86,219,.35);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: var(--ink);
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1.5px solid var(--border);
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .stat-item {
+      background: white;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ===========================
+       SECTION SHELL
+    =========================== */
+    .section {
+      padding: 80px 0;
+    }
+    .section-alt { background: var(--surface-2); }
+    .section-header {
+      margin-bottom: 48px;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .section-desc {
+      font-size: 1rem;
+      color: var(--ink-light);
+      max-width: 540px;
+      font-weight: 300;
+    }
+
+    /* ===========================
+       FILTER TABS
+    =========================== */
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .filter-tab {
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1.5px solid var(--border);
+      color: var(--ink-light);
+      background: white;
+      transition: all var(--transition);
+    }
+    .filter-tab:hover, .filter-tab.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    /* ===========================
+       HOST CARDS
+    =========================== */
+    .hosts-grid {
+      display: grid;
+      gap: 20px;
+    }
+    .host-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 28px 32px;
+      transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: start;
+      position: relative;
+    }
+    .host-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+      border-color: rgba(26,86,219,.2);
+    }
+    .host-card.featured {
+      border-color: rgba(26,86,219,.25);
+      background: linear-gradient(135deg, #fafbff 0%, white 100%);
+    }
+    .host-badge {
+      position: absolute;
+      top: -1px; left: 28px;
+      background: var(--accent);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 0 0 8px 8px;
+    }
+    .host-logo {
+      width: 60px; height: 60px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      color: white;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+    .host-info { min-width: 0; }
+    .host-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+    .host-tagline {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+      font-weight: 300;
+    }
+    .host-stars {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+    .stars {
+      display: flex;
+      gap: 2px;
+      color: var(--gold);
+    }
+    .star-score {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-left: 4px;
+    }
+    .host-specs {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .spec-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      font-weight: 600;
+    }
+    .spec-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .host-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .host-price {
+      text-align: right;
+    }
+    .price-main {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .price-period {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      font-weight: 400;
+    }
+    .price-original {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      text-decoration: line-through;
+    }
+    .btn-visit {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      white-space: nowrap;
+      transition: all var(--transition);
+      box-shadow: 0 4px 12px rgba(26,86,219,.25);
+    }
+    .btn-visit:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(26,86,219,.35);
+    }
+    .host-pros-cons {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      margin-top: 4px;
+    }
+    .pros-list, .cons-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .pros-list li, .cons-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.83rem;
+      color: var(--ink-light);
+    }
+    .pros-list li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .cons-list li::before {
+      content: '✕';
+      color: var(--red);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .hidden { display: none !important; }
+
+    /* ===========================
+       COMPARISON TABLE
+    =========================== */
+    .compare-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--border);
+      box-shadow: var(--shadow-md);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      min-width: 640px;
+    }
+    .compare-table th {
+      background: var(--surface-2);
+      padding: 14px 20px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      font-weight: 600;
+      text-align: left;
+      border-bottom: 1.5px solid var(--border);
+      white-space: nowrap;
+    }
+    .compare-table td {
+      padding: 16px 20px;
+      font-size: 0.88rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:hover td { background: var(--surface-2); }
+    .table-host-name {
+      font-weight: 600;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .table-logo-sm {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--gold-light);
+      color: #78350f;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .table-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+    .table-btn:hover { background: var(--accent); color: white; }
+
+    /* ===========================
+       BLOG
+    =========================== */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .post-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .post-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .post-thumb {
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .post-thumb-inner {
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: -0.01em;
+      padding: 24px;
+      text-align: center;
+      line-height: 1.3;
+    }
+    .post-category {
+      position: absolute;
+      top: 14px; left: 14px;
+      background: rgba(0,0,0,.5);
+      backdrop-filter: blur(8px);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+    .post-body { padding: 22px; }
+    .post-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .post-excerpt {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+      margin-bottom: 16px;
+      font-weight: 300;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+    .post-meta-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .post-avatar {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: gap var(--transition);
+    }
+    .read-more:hover { gap: 8px; }
+
+    /* ===========================
+       FAQ
+    =========================== */
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: box-shadow var(--transition);
+    }
+    .faq-item:hover { box-shadow: var(--shadow-md); }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      text-align: left;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      transition: color var(--transition);
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-icon {
+      width: 28px; height: 28px;
+      background: var(--surface-2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: transform var(--transition), background var(--transition);
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: var(--accent);
+      color: white;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* ===========================
+       TRUST BAR
+    =========================== */
+    .trust-bar {
+      background: var(--ink);
+      padding: 24px 0;
+    }
+    .trust-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+    .trust-item svg { opacity: 0.6; }
+
+    /* ===========================
+       NEWSLETTER
+    =========================== */
+    .newsletter {
+      background: linear-gradient(135deg, var(--accent) 0%, #1040b0 100%);
+      padding: 72px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .newsletter::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -10%;
+      width: 500px; height: 500px;
+      background: rgba(255,255,255,.04);
+      border-radius: 50%;
+    }
+    .newsletter h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: white;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .newsletter p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      max-width: 440px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .newsletter-input {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: none;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .newsletter-btn {
+      background: var(--gold);
+      color: #1a1a1a;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      white-space: nowrap;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .newsletter-btn:hover { background: #e68a00; transform: translateY(-1px); }
+    .newsletter-disclaimer {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 12px;
+      position: relative;
+    }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    .footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.7);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.75;
+      margin-top: 14px;
+      max-width: 260px;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-heading {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .footer-links li + li { margin-top: 10px; }
+    .footer-links a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: white; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p { font-size: 0.8rem; }
+    .footer-disclaimer {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      max-width: 560px;
+      line-height: 1.6;
+    }
+
+    /* ===========================
+       BACK TO TOP
+    =========================== */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 44px; height: 44px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      transform: translateY(16px);
+      pointer-events: none;
+      transition: all var(--transition);
+      z-index: 50;
+    }
+    .back-to-top.visible { opacity: 1; transform: none; pointer-events: auto; }
+    .back-to-top:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+    /* ===========================
+       ANIMATIONS
+    =========================== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.6s ease forwards; opacity: 0; }
+    .fade-up-1 { animation-delay: 0.1s; }
+    .fade-up-2 { animation-delay: 0.2s; }
+    .fade-up-3 { animation-delay: 0.3s; }
+    .fade-up-4 { animation-delay: 0.4s; }
+
+    /* ===========================
+       RESPONSIVE
+    =========================== */
+    @media (max-width: 900px) {
+      .host-card {
+        grid-template-columns: auto 1fr;
+      }
+      .host-cta {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+      }
+      .host-price { text-align: left; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 64px 0 56px; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .host-card { grid-template-columns: 1fr; }
+      .host-cta { align-items: flex-start; }
+      .host-pros-cons { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .newsletter-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo" aria-label="HostVault Home">
+      <div class="nav-logo-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M2 5L8 2L14 5V11L8 14L2 11V5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="8" cy="8" r="2" fill="white"/>
+        </svg>
+      </div>
+      HostVault
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#top-picks">Top Picks</a></li>
+      <li><a href="#compare">Compare</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#top-picks" class="nav-cta">Find My Host →</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Open menu" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-badge fade-up fade-up-1">
+      ⭐ Updated May 2025 — All Hosts Independently Tested
+    </div>
+    <h1 class="fade-up fade-up-1">Stop Paying for Hosting<br/><em>That Lets You Down</em></h1>
+    <p class="hero-sub fade-up fade-up-2">
+      We've tested 40+ hosting providers so you don't have to waste time or money. Real speed tests. Real uptime data. Zero fluff.
+    </p>
+    <div class="hero-actions fade-up fade-up-3">
+      <a href="#top-picks" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L10 6H14L11 9L12.5 13L8 10.5L3.5 13L5 9L2 6H6L8 2Z" fill="white"/></svg>
+        See Top Picks
+      </a>
+      <a href="#compare" class="btn-secondary">
+        Compare Plans
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats fade-up fade-up-4">
+      <div class="stat-item">
+        <div class="stat-value">40+</div>
+        <div class="stat-label">Hosts Tested</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">3 yrs</div>
+        <div class="stat-label">Testing Period</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">12K+</div>
+        <div class="stat-label">Readers Helped</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">99.9%</div>
+        <div class="stat-label">Avg Uptime Tracked</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TRUST BAR ==================== -->
+<div class="trust-bar">
+  <div class="container trust-inner">
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L10.5 6.5H15L11.5 9L13 13.5L9 11L5 13.5L6.5 9L3 6.5H7.5L9 2Z" fill="#f59e0b"/></svg>
+      Independent Reviews
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/><path d="M6 9L8 11L12 7" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Real Uptime Monitoring
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5H15M3 9H15M3 13H9" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/></svg>
+      60-Day Test Periods
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L11 7H16L12 10.5L13.5 15.5L9 12.5L4.5 15.5L6 10.5L2 7H7L9 2Z" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" fill="none"/></svg>
+      No Paid Placements
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/><path d="M6 7H12M6 10H10" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Updated Regularly
+    </div>
+  </div>
+</div>
+
+<!-- ==================== TOP PICKS ==================== -->
+<section class="section" id="top-picks">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Top Picks</span>
+      <h2 class="section-title">Best Web Hosting Plans for 2025</h2>
+      <p class="section-desc">Tested, ranked, and updated every six months. Filter by hosting type to find your match.</p>
+    </div>
+
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-tab active" onclick="filterHosts('all', this)">All Hosts</button>
+      <button class="filter-tab" onclick="filterHosts('shared', this)">Shared Hosting</button>
+      <button class="filter-tab" onclick="filterHosts('wordpress', this)">WordPress</button>
+      <button class="filter-tab" onclick="filterHosts('cloud', this)">Cloud Hosting</button>
+      <button class="filter-tab" onclick="filterHosts('managed', this)">Managed Hosting</button>
+    </div>
+
+    <div class="hosts-grid" id="hostsGrid">
+      <!-- Rendered by JS from content.js data -->
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COMPARISON TABLE ==================== -->
+<section class="section section-alt" id="compare">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Side-by-Side</span>
+      <h2 class="section-title">Quick Comparison Table</h2>
+      <p class="section-desc">All key specs at a glance so you can make a decision without reading every review.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Host</th>
+            <th>Starting Price</th>
+            <th>Uptime</th>
+            <th>Speed</th>
+            <th>Support</th>
+            <th>Our Rating</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="compareTableBody">
+          <!-- Rendered by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BLOG ==================== -->
+<section class="section" id="blog">
+  <div class="container">
+    <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+      <div>
+        <span class="section-label">From the Blog</span>
+        <h2 class="section-title">Hosting Guides & Advice</h2>
+      </div>
+      <a href="#blog" class="btn-secondary" style="font-size:0.85rem;padding:10px 18px;">View All Posts →</a>
+    </div>
+    <div class="posts-grid" id="postsGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Questions We Get Asked a Lot</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ==================== NEWSLETTER ==================== -->
+<section class="newsletter">
+  <div class="container">
+    <h2>Get Hosting Deals Before Everyone Else</h2>
+    <p>Join 8,000+ readers who get our monthly roundup of the best hosting deals, discount codes, and new reviews.</p>
+    <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+      <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email address" />
+      <button type="submit" class="newsletter-btn">Subscribe Free</button>
+    </form>
+    <p class="newsletter-disclaimer">No spam. Unsubscribe anytime. We respect your inbox.</p>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="nav-logo-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M2 5L8 2L14 5V11L8 14L2 11V5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="8" cy="8" r="2" fill="white"/>
+            </svg>
+          </div>
+          HostVault
+        </div>
+        <p>Honest, independent web hosting reviews since 2022. We test every host ourselves before recommending them.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Reviews</p>
+        <ul class="footer-links">
+          <li><a href="#top-picks">Best Shared Hosting</a></li>
+          <li><a href="#top-picks">Best WordPress Hosting</a></li>
+          <li><a href="#top-picks">Best Cloud Hosting</a></li>
+          <li><a href="#top-picks">Best Managed Hosting</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Guides</p>
+        <ul class="footer-links">
+          <li><a href="#blog">Hosting for Beginners</a></li>
+          <li><a href="#blog">Shared vs VPS Hosting</a></li>
+          <li><a href="#blog">How to Choose a Host</a></li>
+          <li><a href="#blog">Hosting & SEO</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Company</p>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Review Methodology</a></li>
+          <li><a href="#">Affiliate Disclosure</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HostVault. All rights reserved.</p>
+      <p class="footer-disclaimer">Affiliate Disclosure: HostVault may earn a commission when you purchase through links on this site, at no additional cost to you. Our reviews remain independent and unbiased. See our <a href="#" style="color:rgba(255,255,255,0.6);text-decoration:underline;">disclosure policy</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 12V4M4 8L8 4L12 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+// ===================================================
+//  CONTENT DATA (inline copy — matches content.js)
+//  To update content, edit src/data/content.js
+// ===================================================
+const hosts = [
+  {
+    id: "siteground", name: "SiteGround", logo: "SG", logoColor: "#f5a623",
+    badge: "Editor's Pick", tagline: "Lightning-fast managed hosting with world-class support",
+    rating: 4.9, price: "$2.99", period: "/mo", originalPrice: "$17.99",
+    affiliate_url: "https://siteground.com",
+    pros: ["Free SSL & CDN", "Daily backups", "24/7 expert support", "99.99% uptime SLA"],
+    cons: ["Renewals cost more", "No free domain on starter"],
+    specs: { uptime: "99.99%", speed: "412ms", support: "24/7 Live", storage: "10 GB SSD" },
+    category: ["shared", "wordpress", "cloud"], featured: true,
+  },
+  {
+    id: "bluehost", name: "Bluehost", logo: "BH", logoColor: "#00a4e0",
+    badge: "Best for Beginners", tagline: "WordPress-recommended host with smooth onboarding",
+    rating: 4.7, price: "$1.99", period: "/mo", originalPrice: "$10.99",
+    affiliate_url: "https://bluehost.com",
+    pros: ["Free domain for 1 year", "1-click WordPress install", "Unmetered bandwidth", "30-day money back"],
+    cons: ["Upsells during checkout", "Speed could be faster"],
+    specs: { uptime: "99.98%", speed: "489ms", support: "24/7 Phone & Chat", storage: "50 GB SSD" },
+    category: ["shared", "wordpress"], featured: true,
+  },
+  {
+    id: "cloudways", name: "Cloudways", logo: "CW", logoColor: "#1d6fa4",
+    badge: "Best Performance", tagline: "Managed cloud hosting built for developers and growing businesses",
+    rating: 4.8, price: "$11", period: "/mo", originalPrice: null,
+    affiliate_url: "https://cloudways.com",
+    pros: ["Choose your cloud provider", "Free SSL & migrations", "Superb page speeds", "Scalable on demand"],
+    cons: ["Not ideal for total beginners", "Email hosting not included"],
+    specs: { uptime: "99.99%", speed: "218ms", support: "24/7 Expert Chat", storage: "25 GB SSD" },
+    category: ["cloud", "managed"], featured: true,
+  },
+  {
+    id: "hostinger", name: "Hostinger", logo: "HO", logoColor: "#673de6",
+    badge: "Best Budget", tagline: "Dirt cheap hosting that actually delivers solid performance",
+    rating: 4.6, price: "$1.99", period: "/mo", originalPrice: "$9.99",
+    affiliate_url: "https://hostinger.com",
+    pros: ["Incredibly affordable", "hPanel is intuitive", "Free SSL included", "Weekly backups"],
+    cons: ["Support quality varies", "Limited advanced features"],
+    specs: { uptime: "99.9%", speed: "523ms", support: "24/7 Chat", storage: "50 GB SSD" },
+    category: ["shared", "wordpress"], featured: false,
+  },
+  {
+    id: "kinsta", name: "Kinsta", logo: "KN", logoColor: "#2ecb71",
+    badge: "Premium WordPress", tagline: "Google Cloud-powered managed WordPress hosting for professionals",
+    rating: 4.9, price: "$35", period: "/mo", originalPrice: null,
+    affiliate_url: "https://kinsta.com",
+    pros: ["Built on Google Cloud", "Free CDN & SSL", "Staging environments", "Elite support team"],
+    cons: ["Pricier than shared hosts", "WordPress only"],
+    specs: { uptime: "99.99%", speed: "187ms", support: "24/7 Expert Chat", storage: "10 GB NVMe" },
+    category: ["managed", "wordpress", "cloud"], featured: false,
+  },
+  {
+    id: "a2hosting", name: "A2 Hosting", logo: "A2", logoColor: "#e8452c",
+    badge: "Fastest Shared", tagline: "Speed-obsessed hosting with Turbo plans that scream",
+    rating: 4.5, price: "$2.99", period: "/mo", originalPrice: "$10.99",
+    affiliate_url: "https://a2hosting.com",
+    pros: ["Turbo servers (20x faster)", "Anytime money-back guarantee", "Free site migration", "Developer-friendly"],
+    cons: ["Backups cost extra on basic", "Interface feels dated"],
+    specs: { uptime: "99.9%", speed: "320ms", support: "24/7 Guru Crew", storage: "100 GB SSD" },
+    category: ["shared", "managed"], featured: false,
+  },
+];
+
+const posts = [
+  {
+    id: "cheap-wordpress-hosting-2025",
+    title: "7 Best Cheap WordPress Hosting Plans That Don't Compromise Speed",
+    excerpt: "Budget hosting doesn't have to mean slow load times and constant downtime. We put seven wallet-friendly plans through their paces to find the ones worth your money.",
+    author: "James Mercer", date: "May 28, 2025", readTime: "9 min read",
+    category: "WordPress", image_color: "linear-gradient(135deg, #667eea, #764ba2)",
+  },
+  {
+    id: "shared-vs-vps-hosting",
+    title: "Shared vs VPS Hosting: Which One Does Your Website Actually Need?",
+    excerpt: "The hosting type you choose affects your site's speed, security, and scalability. Here's how to pick the right one without overspending on resources you don't need.",
+    author: "Sarah Chen", date: "May 14, 2025", readTime: "7 min read",
+    category: "Guides", image_color: "linear-gradient(135deg, #f093fb, #f5576c)",
+  },
+  {
+    id: "website-speed-optimization",
+    title: "Why Your Hosting Plan Is Killing Your SEO (And How to Fix It)",
+    excerpt: "Google uses page speed as a ranking factor. If your host is slow, your rankings suffer. We break down exactly how hosting speed affects SEO and what to do about it.",
+    author: "James Mercer", date: "April 30, 2025", readTime: "11 min read",
+    category: "SEO", image_color: "linear-gradient(135deg, #4facfe, #00f2fe)",
+  },
+  {
+    id: "best-hosting-small-business",
+    title: "Best Web Hosting for Small Businesses in 2025: Our Top 5 Picks",
+    excerpt: "Small businesses have unique hosting needs — reliability, email, easy management, and room to grow. These five hosts check every box without breaking the budget.",
+    author: "Sarah Chen", date: "April 18, 2025", readTime: "8 min read",
+    category: "Guides", image_color: "linear-gradient(135deg, #43e97b, #38f9d7)",
+  },
+];
+
+const faqs = [
+  {
+    q: "How do you choose which hosts to review?",
+    a: "Every host we review gets tested hands-on for at least 60 days. We measure uptime with third-party monitoring tools, run real speed tests from multiple locations, and contact support multiple times to gauge response quality. We never accept payment to influence our rankings.",
+  },
+  {
+    q: "Do you earn commission from these links?",
+    a: "Yes — when you purchase through our links, we may earn a commission at no extra cost to you. This is how we keep the site running and free. Our editorial process is completely independent of any affiliate relationships.",
+  },
+  {
+    q: "What's the best hosting for a brand-new website?",
+    a: "For most beginners, we recommend SiteGround's StartUp plan or Bluehost's Basic plan. Both are affordable, beginner-friendly, and include everything you need to launch — free SSL, WordPress auto-install, and solid support.",
+  },
+  {
+    q: "Is free hosting worth it?",
+    a: "Free hosting is fine for learning or hobby projects, but it's not suitable for any serious website. You'll deal with forced ads, severe performance limits, no custom domain, and near-zero support. For the price of a coffee each month, shared hosting gives you a dramatically better experience.",
+  },
+  {
+    q: "How often do you update your reviews?",
+    a: "We re-test our top picks every six months and update pricing, features, and performance data accordingly. Our last full review cycle was completed in April 2025.",
+  },
+];
+
+// ===================================================
+//  RENDER FUNCTIONS
+// ===================================================
+function starsSVG(rating) {
+  const full = Math.floor(rating);
+  const half = rating % 1 >= 0.5;
+  let s = '';
+  for (let i = 0; i < 5; i++) {
+    if (i < full) s += '★';
+    else if (i === full && half) s += '½';
+    else s += '☆';
+  }
+  return `<span class="stars">${s}</span>`;
+}
+
+function renderHosts(filter = 'all') {
+  const grid = document.getElementById('hostsGrid');
+  const filtered = filter === 'all' ? hosts : hosts.filter(h => h.category.includes(filter));
+  grid.innerHTML = filtered.map(h => `
+    <article class="host-card ${h.featured ? 'featured' : ''}" data-cat="${h.category.join(' ')}">
+      ${h.badge ? `<div class="host-badge">${h.badge}</div>` : ''}
+      <div class="host-logo" style="background:${h.logoColor}">${h.logo}</div>
+      <div class="host-info">
+        <h3 class="host-name">${h.name}</h3>
+        <p class="host-tagline">${h.tagline}</p>
+        <div class="host-stars">
+          ${starsSVG(h.rating)}
+          <span class="star-score">${h.rating}/5</span>
+        </div>
+        <div class="host-specs">
+          <div class="spec-item"><span class="spec-label">Uptime</span><span class="spec-value">${h.specs.uptime}</span></div>
+          <div class="spec-item"><span class="spec-label">Speed</span><span class="spec-value">${h.specs.speed}</span></div>
+          <div class="spec-item"><span class="spec-label">Storage</span><span class="spec-value">${h.specs.storage}</span></div>
+          <div class="spec-item"><span class="spec-label">Support</span><span class="spec-value">${h.specs.support}</span></div>
+        </div>
+      </div>
+      <div class="host-cta">
+        <div class="host-price">
+          ${h.originalPrice ? `<div class="price-original">Was ${h.originalPrice}/mo</div>` : ''}
+          <div><span class="price-main">${h.price}</span><span class="price-period">${h.period}</span></div>
+        </div>
+        <a href="${h.affiliate_url}" target="_blank" rel="noopener sponsored" class="btn-visit">
+          Visit ${h.name}
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 11L11 2M11 2H5M11 2V8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+      <div class="host-pros-cons">
+        <ul class="pros-list">${h.pros.map(p => `<li>${p}</li>`).join('')}</ul>
+        <ul class="cons-list">${h.cons.map(c => `<li>${c}</li>`).join('')}</ul>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderTable() {
+  document.getElementById('compareTableBody').innerHTML = hosts.map(h => `
+    <tr>
+      <td>
+        <div class="table-host-name">
+          <div class="table-logo-sm" style="background:${h.logoColor}">${h.logo}</div>
+          ${h.name}
+        </div>
+      </td>
+      <td><strong>${h.price}${h.period}</strong></td>
+      <td>${h.specs.uptime}</td>
+      <td>${h.specs.speed}</td>
+      <td>${h.specs.support}</td>
+      <td><span class="rating-pill">★ ${h.rating}</span></td>
+      <td>
+        <a href="${h.affiliate_url}" target="_blank" rel="noopener sponsored" class="table-btn">
+          View Deal
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 10L10 1M10 1H4M10 1V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </a>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function renderPosts() {
+  document.getElementById('postsGrid').innerHTML = posts.map(p => `
+    <article class="post-card">
+      <div class="post-thumb">
+        <div class="post-thumb-inner" style="background:${p.image_color}">${p.title}</div>
+        <span class="post-category">${p.category}</span>
+      </div>
+      <div class="post-body">
+        <h3 class="post-title">${p.title}</h3>
+        <p class="post-excerpt">${p.excerpt}</p>
+        <div class="post-meta">
+          <div class="post-meta-left">
+            <div class="post-avatar">${p.author.split(' ').map(n=>n[0]).join('')}</div>
+            <span>${p.author} · ${p.date}</span>
+          </div>
+          <a href="#blog" class="read-more">${p.readTime} →</a>
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderFAQ() {
+  document.getElementById('faqList').innerHTML = faqs.map((f, i) => `
+    <div class="faq-item" id="faq-${i}">
+      <button class="faq-question" onclick="toggleFAQ(${i})" aria-expanded="false">
+        ${f.q}
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer" role="region">
+        <p class="faq-answer-inner">${f.a}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ===================================================
+//  INTERACTIONS
+// ===================================================
+function filterHosts(cat, btn) {
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  renderHosts(cat);
+}
+
+function toggleFAQ(i) {
+  const item = document.getElementById(`faq-${i}`);
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+function handleSubscribe(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = '✓ You\'re in!';
+  btn.style.background = '#059669';
+  setTimeout(() => { btn.textContent = 'Subscribe Free'; btn.style.background = ''; }, 3000);
+}
+
+function toggleMenu(btn) {
+  const links = document.querySelector('.nav-links');
+  links.style.display = links.style.display === 'flex' ? '' : 'flex';
+  links.style.flexDirection = 'column';
+  links.style.position = 'absolute';
+  links.style.top = '64px';
+  links.style.left = 0;
+  links.style.right = 0;
+  links.style.background = 'white';
+  links.style.padding = '20px 24px';
+  links.style.borderBottom = '1px solid #e2e5ea';
+  links.style.zIndex = 99;
+  links.style.gap = '16px';
+}
+
+// Back to top visibility
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('backToTop');
+  btn.classList.toggle('visible', window.scrollY > 400);
+});
+
+// Init
+renderHosts();
+renderTable();
+renderPosts();
+renderFAQ();
+</script>
+</body>
+</html>

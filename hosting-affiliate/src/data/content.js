@@ -158,6 +158,26 @@ export const posts = [
     tags: ["WordPress", "Budget Hosting", "Shared Hosting"],
     featured: true,
     image_color: "#667eea",
+    content: `
+    <h1>Best No Verification Casinos in Spain</h1>
+
+    <p>
+      No verification casinos are becoming popular in Spain
+      because players want faster signups and quicker withdrawals.
+    </p>
+
+    <h2>Top Picks</h2>
+
+    <p>
+      We tested dozens of casinos and selected the best options
+      for Spanish players.
+    </p>
+
+    <h2>1. BitStarz</h2>
+
+    <p>
+      BitStarz is one of the biggest crypto-friendly casinos...
+    </p>
   },
   {
     id: "shared-vs-vps-hosting",
